@@ -10,32 +10,88 @@
             padding: 0;
         }
 
+        #logo {
+            width: 400px;
+            height: 150px;
+            position: relative;
+        }
+        #logo img {
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            position: absolute;
+            top: 25px; left: 100px
+        }
         #wrap {
             width: 400px;
-            height: 400px;
+            height: 200px;
             border: 2px solid black;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
         }
         #ID div:nth-child(1) {
             width: 200px;
             height: 20px;
 
-            margin-top: 10px;
-            border: 1px solid black;
-            border-radius: 5px 5px 0 0px;
+            margin-top: 30px;
+        }
+        #ID div:nth-child(2) {
+            width: 200px;
+            height: 20px;
+
+            margin-top: 20px;
+        }
+        #id {
+            width: 200px;
+            height: 40px;
+            border-radius: 5px 5px 0 0;
+        }
+        #password {
+            width: 200px;
+            height: 40px;
+            border-radius: 0 0 5px 5px;
+        }
+        #login {
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            bottom: 30px; left: 100px;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #fff;
+            
+            border-style: none;
+            border-radius: 10px;
+            background-color: #03c75a;
         }
     </style>
 </head>
 <body>
+    <div id="logo">
+        <img src="naver_logo.jfif"/>
+    </div>
     <div id="wrap">
         <div id="ID">
-            <div>아이디 또는 전화번호</div>
-            <div>비밀번호</div>
+            <div><input type="id" id="id" placeholder="아이디 또는 전화번호"></div>
+            <div><input type="password" id="password" placeholder="비밀번호"></div>
         </div>
-        <div id="login">로그인</div>
+        <div><button type="button" id="login" onclick="btn_click()">로그인</button></div>
     </div>
 
-    <scirpt>
+    <script>
+        function btn_click() {
+            let username = document.getElementById("id").value;
+            let password = document.getElementById("password").value;
 
-    </scirpt>
+            if(username == "mimi" && password == "mimi") {
+                alert("로그인 되었습니다.");
+            } else {
+                alert("아이디 혹은 비밀번호가 틀렸습니다.");
+            }
+        }
+    </script>
 </body>
 </html>
