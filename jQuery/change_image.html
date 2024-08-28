@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <image id="picture" width="300px" height="400px" src="https://via.placeholder.com/300x400"/>
+    <br/>
+    <button target-img="1.jpg">1</button>&nbsp;&nbsp;
+    <button target-img="2.jpg">2</button>&nbsp;&nbsp;
+    <button target-img="3.jpg">3</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $('button').click(function(){
+            //alert($(this).attr("target-img"));
+            let fileName = $(this).attr("target-img");
+            let src = "images/"+fileName;
+
+            $('img#picture').attr("src", src);
+        });
+    </script>
+</body>
+</html>
