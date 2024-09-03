@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit rerum voluptatem ipsa? Numquam, suscipit similique! Impedit beatae ad saepe error fugit voluptas, explicabo quam dolores. Saepe impedit ex alias accusamus!</p>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        // 이벤트를 연결합니다.
+        $('button').click(function() {
+            // 간단한 효과를 적용합니다.
+            $('.page').fadeToggle(1000);
+        });
+    </script>
+</body>
+</html>
