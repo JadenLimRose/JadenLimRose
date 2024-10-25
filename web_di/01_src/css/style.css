@@ -1,157 +1,239 @@
 @charset "utf-8";
+/* CSS Document */
 
 *{
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    font-family: "맑은 고딕";
-    color: #333333;
+	margin:0 auto;
+	padding:0;
+	list-style:none;
+	font-family:"맑은 고딕";
+	color:#333333  /* 컬러 가이드: 기본 텍스트의 색 */
+}
+a{
+	text-decoration:none;
+	display:block;
 }
 
-a {
-    text-decoration: none;
-    display: block;
+#wrap{
+	width:1000px; /* 와이어프레임 너비 */
+	height:650px; /* 와이어프레임 B+C+D 높이 */
+	background-color:#ffffff; /* 컬러 가이드: 배경색 */
+	font-size:20px;
+}
+header{  /* A영역: 와이어프레임 왼쪽 영역 */
+	float:left;
+    position:absolute;	
+}
+.top{    /* 로고+메뉴 영역 */
+	float:left; 
+	width:200px;
+	height:650px;
+}
+.logo{
+	float:left;
+	width:200px;
+	height:40px;
+	margin-top:30px;
+	margin-bottom:30px;
 }
 
-#wrap {
-    width: 1000px;
-    height: 650px;
-    background-color: #ffffff;
-    font-size: 20px;
+.menu{
+	float:left;
+    position:absolute;
+    top:100px;
+    left:10px;
+    text-align:center;
+    z-index:1;	
+}
+.navi>li{
+	float:left;
+	width:180px;
+}
+.navi>li>a{
+	width:180px; 
+	height:40px; 
+	line-height:40px; 
+	font-size:16px;
+	font-weight:bold;
+	background-color:#333333;
+	color:#ffffff; 
+}
+.navi>li>a:hover{
+	background-color:#eeeeee;
+	color:#000000; 
+}
+.submenu{         
+	float:left;
+	width:180px;
+	height:100%;
+	left:180px;
+	top:0px; 
+	position:absolute;
+	background-color:#cccccc;
+	display:none;
+	z-index:1;
 }
 
-header{
-    float: left;
-    position: absolute;
+.submenu>li>a{    
+	width:180px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	background-color:#cccccc;
+	color:#ffffff;
+}
+.submenu>li>a:hover{ 
+	background-color:#999999;
+	color:#ffff00;
 }
 
-.top {
-    float: left;
-    width: 200px;
-    height: 650px;
+section{
+	float:right;
+	width:800px;
+}
+.imgslide{  /* B영역: 이미지 슬라이드 영역 */	
+	width:800px;
+	height:350px;
+	position:relative;
 }
 
-.logo {
-    float: left;
-    width: 200px;
-    height: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.imgslide>a{
+    display:block; 
+    position:absolute;
+}
+.imgslide span{
+    width:160px;
+    text-align:center;
+    color:#ffffff;
+    font-weight:bold;
+    position:absolute;
+    left:40%;
+    top:45%;
+    background-color:rgba(200,200,200,0.5);
 }
 
-.menu {
-    float: left;
-    position: absolute;
-    top: 100px;
-    left: 10px;
-    text-align: center;
-    z-index: 1;
+.contents{  /* C영역: 공지사항+갤러리+바로가기 영역 */	
+	width:800px;
+	height:200px;
+}
+.notice{
+	float:left;
+	width:300px;
+	height:200px;
+}
+.tab{
+	float:left;
+	width:100%;
+}
+.notice h4{
+	float:left;
+	height:50px;
+	line-height:50px;
 }
 
-.navi>li {
-    float: left;
-    width: 180px;
+.notice ul{
+	float:left;
+	width:280px;		
+}
+.notice ul > li {
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:14px; 
+}
+.notice li:hover{
+	font-weight:bold;
 }
 
-.navi>li>a {
-    width: 180px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: #333333;
-    color: #ffffff;
+.notice li span{
+	float:right;
+}
+.gallery{
+	float:left;
+	width:300px;
+	height:200px;
+}
+.gallery h4{
+	float:left;
+	height:50px;
+	line-height:50px;
+}
+.gallery ul li{
+    float:left;
+    padding:10px;
+    margin-top:10px;
+}
+.gallery img{
+    width:80px;	
+    height:80px;
+}
+.gallery li:hover{
+    opacity:0.5;
 }
 
-.navi>li>a:hover {
-    background-color: #eeeeee;
-    color: #000000;
-}
-.submenu {
-    float: left;
-    width: 180px;
-    height: 100%;
-    left: 180px;
-    top: 0px;
-    position: absolute;
-    background-color: #cccccc;
-    display: none;
-    z-index: 1;
+
+.shortcut{
+	float:right;
+	width:200px;
+	height:200px;
 }
 
-.submenu>li>a {
-    width: 180px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #cccccc;
-    color: #ffffff;
+.shortcut img{
+    float:right;
+    width:180px;
+    height:180px;
+    padding:10px;	
 }
-.submenu>li>a:hover {
-    background-color: #999999;
-    color: #ffff00;
-}
-
-section {
-    float: right;
-    width: 800px;
-}
-.imgslide {
-    width: 800px;
-    height: 350px;
-    position: relative;
-}
-.imgslide>a {
-    display: block;
-    position: absolute;
-}
-.imgslide span {
-    width: 160px;
-    text-align: center;
-    color: #ffffff;
-    font-weight: bold;
-    position: absolute;
-    left: 40%;
-    top: 45%;
-    background-color: rgba(200, 200, 200, 0.5);
+.sctext{
+    width:100px;
+    text-align:center;
+    font-weight:bold;
+    position:absolute;
+    background-color:rgba(255,255,255,0.5);
+    margin-top:85px;
+    margin-left:50px;
 }
 
-.contents {  /* 영역: 공지사항+갤러리+바로가기 영역 */
-    width: 800px;
-    height: 200px;
+footer{     /* D영역: 와이어프레임 오른쪽 하단 영역 */
+	float:right;
 }
-.notice {
-    float: left;
-    width: 300px;
-    height: 200px;
+.bottom{    /*  로고+Copyright+패밀리사이트 영역 */
+	float:right;
+	width:800px;
+	height:100px;
+    background-color:#cccccc;
 }
-.tab {
-    float: left;
-    width: 100%;
+.btlogo{
+	float:left;
+	width:200px;
+	height:100px;
 }
-.notice h4 {
-    float: left;
-    height: 50px;
-    line-height: 50px;
+.btlogo img{    
+	float:left;
+	width:200px;
+	height:40px;
+	margin-top:25px;
+	margin-left:10px;
 }
-.notice ul {
-    float: left;
-    width: 280px;
+.copy{
+	float:left;
+	width:400px;
+	height:100px;
+    text-align:center;
+    font-size:14px;
+	line-height:100px;
 }
-.notice ul>li {
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 14px;
+
+.familysite{
+	float:right;
+	width:200px;
+	height:100px;
 }
-.gallery {
-    float: left;
-    width: 300px;
-    height: 200px;
-}
-.shortcut {
-    float: right;
-    width: 200px;
-    height: 200px;
+.familysite select{
+    float:right;
+    height:30px;
+    width:190px;
+    margin-top:33px;
+    margin-right:10px;
+    font-size:14px;
 }
